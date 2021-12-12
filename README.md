@@ -31,7 +31,7 @@ net_test_server.1.yvxdyl6g4825@lab1    | Connection from 10.0.3.7 56464 received
 
 Remove stack
 ```shell
-docker --context lab2https stack rm net_tools                                                                                    (main)net-tools
+docker --context lab2https stack rm net_tools
 Removing service net_tools_client
 Removing service net_tools_server
 Removing network net_tools_test_network
