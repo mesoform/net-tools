@@ -19,11 +19,11 @@ watch docker stack ps net_tools
 
 Check logs
 ```shell
-docker service logs net_tools_client                                                                          (main)net-tools
+docker service logs net_tools_client
 net_test_client.1.soc99zrkbtlu@lab2    | Connection to server 80 port [tcp/http] succeeded!
 ```
 ```shell
-docker service logs net_tools_server                                                                          (main)net-tools
+docker service logs net_tools_server
 net_test_server.1.4i9q9vvw8p5i@lab1    | Listening on [0.0.0.0] (family 2, port 80)
 net_test_server.1.yvxdyl6g4825@lab1    | Listening on [0.0.0.0] (family 2, port 80)
 net_test_server.1.yvxdyl6g4825@lab1    | Connection from 10.0.3.7 56464 received!
