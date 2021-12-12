@@ -23,7 +23,7 @@ services:
     image: mesoform/net-tools:latest
     command: nc -Nv server 80
     networks:
-      net_tools_test:
+      test_network:
     deploy:
       mode: replicated
       replicas: 1
