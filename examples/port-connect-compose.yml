@@ -2,7 +2,6 @@ version: "3.8"
 
 networks:
   net_tools_test:
-    external: true
     driver: overlay
     driver_opts:
       com.docker.network.enable_ipv6: "false"
