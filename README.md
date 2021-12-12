@@ -28,3 +28,12 @@ net_test_server.1.4i9q9vvw8p5i@lab1    | Listening on [0.0.0.0] (family 2, port 
 net_test_server.1.yvxdyl6g4825@lab1    | Listening on [0.0.0.0] (family 2, port 80)
 net_test_server.1.yvxdyl6g4825@lab1    | Connection from 10.0.3.7 56464 received!
 ```
+
+Remove stack
+```shell
+docker --context lab2https stack rm net_tools                                                                                    (main)net-tools
+Removing service net_tools_client
+Removing service net_tools_server
+Removing network net_tools_test_network
+Removing network net_tools_net_tools_test
+```
