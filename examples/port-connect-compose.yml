@@ -1,7 +1,7 @@
 version: "3.8"
 
 networks:
-  net_tools_test:
+  test_network:
     driver: overlay
     driver_opts:
       com.docker.network.enable_ipv6: "false"
@@ -12,7 +12,7 @@ services:
     image: mesoform/net-tools:latest
     command: nc -lv4p 80
     networks:
-      net_tools_test:
+      test_network:
     deploy:
       mode: replicated
       replicas: 1
@@ -27,6 +27,8 @@ services:
     deploy:
       mode: replicated
       replicas: 1
+      restart_policy:
+        condition: none
       placement:
         constraints:
           - node.labels.zone==b
