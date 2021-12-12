@@ -12,14 +12,14 @@ services:
   server:
     image: mesoform/net-tools:latest
     command: nc -lv4p 80
-  networks:
-    net_tools_test:
-  deploy:
-    mode: replicated
-    replicas: 1
-    placement:
-      constraints:
-        - node.labels.zone==a
+    networks:
+      net_tools_test:
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.labels.zone==a
   client:
     image: mesoform/net-tools:latest
     command: nc -Nv server 80
