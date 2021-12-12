@@ -21,7 +21,7 @@ services:
           - node.labels.zone==a
   client:
     image: mesoform/net-tools:latest
-    command: sh -c "while ! host server; do sleep 5; done; nc -Nv server 80"
+    command: sh -c "while ! host server; do sleep 5; done; nc -Nvw 5 server 80"
     networks:
       test_network:
     deploy:
