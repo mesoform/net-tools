@@ -20,6 +20,8 @@ watch docker stack ps net_tools
 Check logs
 ```shell
 docker service logs net_tools_client
+net_test_client.1.soc99zrkbtlu@lab2    | Host server not found: 3(NXDOMAIN)
+net_test_client.1.soc99zrkbtlu@lab2    | server has address 10.0.3.4
 net_test_client.1.soc99zrkbtlu@lab2    | Connection to server 80 port [tcp/http] succeeded!
 ```
 ```shell
