@@ -20,4 +20,4 @@ services:
         condition: none
       placement:
         constraints:
-          - node.labels.workload == ci
+          - node.labels.zone==a
