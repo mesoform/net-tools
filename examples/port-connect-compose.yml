@@ -13,6 +13,8 @@ services:
     command: nc -lv4p 80
     networks:
       test_network:
+    labels:
+      ENV: test
     deploy:
       mode: replicated
       replicas: 1
@@ -24,6 +26,8 @@ services:
     command: sh -c "while ! host server; do sleep 5; done; nc -Nvw 5 server 80"
     networks:
       test_network:
+    labels:
+      ENV: test
     deploy:
       mode: replicated
       replicas: 1

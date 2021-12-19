@@ -13,6 +13,8 @@ services:
     command: curl -iL https://dl-cdn.alpinelinux.org/alpine/v3.14/main
     networks:
       test_network:
+    labels:
+      ENV: test
     deploy:
       mode: replicated
       replicas: 1
@@ -20,4 +22,4 @@ services:
         condition: none
       placement:
         constraints:
-          - node.labels.zone==a
+          - node.labels.storage == one
