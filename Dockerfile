@@ -1,4 +1,10 @@
-FROM alpine:3.22.2
+FROM alpine:3.23.3
 
-RUN apk upgrade --no-cache libxml2 \
- && apk add --no-cache netcat-openbsd tcptraceroute bind-tools curl nmap
+RUN apk upgrade --no-cache && \
+    apk add --no-cache \
+        netcat-openbsd \
+        tcptraceroute \
+        bind-tools \
+        curl \
+        nmap && \
+    rm -rf /var/cache/apk/*
